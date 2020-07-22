@@ -1,13 +1,13 @@
-// UC 6 -> Calculating Wages till Number of Working Days or Total Working Hours per month is Reached
+// UC 7 -> Compute Employee Wage Using Class Methods
 
-public class EmpWageBuilderUC6 {
+public class EmpWageBuilderClassMethod {
 	public static final int IS_PART_TIME=1;
 	public static final int IS_FULL_TIME=2;
 	public static final int EMP_RATE_PER_HOUR=20;
 	public static final int NUM_OF_WORKING_DAYS=20;
 	public static final int MAX_HRS_IN_MONTH=100;
 
-	public static void main(String[] args) {
+	public static int computeEmpWage() {
 		// VARIABLES
 		int empHrs=0;
 		int totalEmpHrs=0;
@@ -31,5 +31,10 @@ public class EmpWageBuilderUC6 {
 	}
 	int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
 	System.out.println("total Employee Wage is " + totalEmpWage);
+	return totalEmpWage;
+	}
+	
+	public static void main(String[] args) {
+		computeEmpWage();
 	}
 }
