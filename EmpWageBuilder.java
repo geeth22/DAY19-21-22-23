@@ -1,22 +1,25 @@
-// UC 10 -> Ability to manage Employee Wage of multiple companies
+// Uc 12 -> Refactor to have list of multiple companies to manage Employee Wage
 
-public class ComputeEmployeeWageCalculator {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CalculateEmpWageUsingList {
         
         public static final int IS_PART_TIME = 1;
         public static final int IS_FULL_TIME = 2;
         public static final int MAX_HRS_IN_MONTH = 10;
         public static final int NUM_OF_WORKING_DAYS = 10;
-        public static CompanyWageObj[] companyWagesForEachEmp= new CompanyWageObj[4];
+        public static List<CompanyWageObj> companyWageLIst = new ArrayList<CompanyWageObj>();
         
         static {
-            companyWagesForEachEmp[0] = new CompanyWageObj();
-            companyWagesForEachEmp[0].EMPOYEE_RATE_PER_HOUR = 20;
-            companyWagesForEachEmp[1] = new CompanyWageObj();
-            companyWagesForEachEmp[1].EMPOYEE_RATE_PER_HOUR = 30;
-            companyWagesForEachEmp[2] = new CompanyWageObj();
-            companyWagesForEachEmp[2].EMPOYEE_RATE_PER_HOUR = 40;
-            companyWagesForEachEmp[3] = new CompanyWageObj();
-            companyWagesForEachEmp[3].EMPOYEE_RATE_PER_HOUR = 50;
+            companyWageLIst.add(new CompanyWageObj());
+            companyWageLIst.get(0).EMPOYEE_RATE_PER_HOUR = 20;
+            companyWageLIst.add(new CompanyWageObj());
+            companyWageLIst.get(1).EMPOYEE_RATE_PER_HOUR = 30;
+            companyWageLIst.add(new CompanyWageObj());
+            companyWageLIst.get(2).EMPOYEE_RATE_PER_HOUR = 40;
+            companyWageLIst.add(new CompanyWageObj());
+            companyWageLIst.get(3).EMPOYEE_RATE_PER_HOUR = 50;
         }
         
         public static void main(String[] args) {
@@ -38,11 +41,11 @@ public class ComputeEmployeeWageCalculator {
                     default:
                         empHrs = 0;
                     }
-                    employeeWage += empHrs * companyWagesForEachEmp[i].EMPOYEE_RATE_PER_HOUR;
+                    employeeWage += empHrs * companyWageLIst.get(i).EMPOYEE_RATE_PER_HOUR;
                 }
             }
             System.out.println(employeeWage);
             
             return ;
         }
-} 
+}
