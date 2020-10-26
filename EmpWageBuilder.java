@@ -1,4 +1,4 @@
-// UC 10 -> Compute Employee Wage of multiple companies
+// UC 8 -> Compute Employee Wage of multiple companies
 
 public class EmpWageBuilderMultipleCompany {
   // Constants
