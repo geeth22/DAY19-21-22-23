@@ -1,4 +1,4 @@
-// UC 11 -> Ability to manage Employee Wage of multiple companies using interface approach
+// UC 11 -> Ability to Manage Employee Wage of Multiple Companies Using Interface Approach.
 
 public class CompanyEmpWage {
 	
